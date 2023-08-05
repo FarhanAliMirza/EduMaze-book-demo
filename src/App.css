@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.titlepg {
+  background: rgb(233, 226, 236);
+  background: linear-gradient(
+    40deg,
+    rgba(233, 226, 236, 1) 0%,
+    rgba(244, 229, 220, 1) 41%,
+    rgba(233, 227, 239, 1) 100%
+  );
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
