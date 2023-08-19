@@ -4,8 +4,15 @@ import InputForm from "./InputForm";
 const Hero = () => {
   return (
     <div className="justify-around py-10 grid sm:grid-cols-3 grid-cols-1 ">
-      <div className="text-center text-black font-bold p-10 text-3xl col-span-2">
-        Loreum Ipsum
+      <div className="text-left p-12 m-12 col-span-2">
+        <h1 className="text-black font-bold text-4xl">
+          Ut Tellus Elementum Sagittis Vitae
+        </h1>
+        <h3 className="text-gray-500 mt-3 mr-12">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Est
+          placerat in egestas erat.
+        </h3>
       </div>
       <div className="justify-center p-6 sm:py-6 mx-3 sm:mr-12 bg-[#1f1f1f] rounded-3xl bg-opacity-5">
         <InputForm />

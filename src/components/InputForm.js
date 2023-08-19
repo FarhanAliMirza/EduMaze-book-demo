@@ -56,10 +56,25 @@ const InputForm = (props) => {
             required
           />
           <label for="floating_phone" class={label}>
-            Parent's phone number
+            Parent's number
           </label>
         </div>
       </div>
+      <label
+        for="class"
+        class="block mb-2 text-sm font-medium text-gray-400 peer-focus:text-gray-500"
+      >
+        Select your class
+      </label>
+      <select
+        id="class"
+        class="bg-transparent mb-6 border-gray-400 border-2 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-900 placeholder-gray-400 block w-full p-2.5 peer"
+      >
+        <option>Class-X (ICSE)</option>
+        <option>Class-X (CBSE)</option>
+        <option>Class-XII (ISC)</option>
+        <option>Class-XII (CBSE)</option>
+      </select>
       <button
         type="submit"
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
