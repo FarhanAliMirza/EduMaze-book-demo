@@ -8,6 +8,19 @@ const InputForm = (props) => {
     <form>
       <div class="relative z-0 w-full mb-6 group">
         <input
+          type="text"
+          name="floating_name"
+          id="floating_name"
+          class={input}
+          placeholder=" "
+          required
+        />
+        <label for="floating_name" class={label}>
+          Name
+        </label>
+      </div>
+      <div class="relative z-0 w-full mb-6 group">
+        <input
           type="email"
           name="floating_email"
           id="floating_email"
@@ -19,65 +32,10 @@ const InputForm = (props) => {
           Email address
         </label>
       </div>
-      <div class="relative z-0 w-full mb-6 group">
-        <input
-          type="password"
-          name="floating_password"
-          id="floating_password"
-          class={input}
-          placeholder=" "
-          required
-        />
-        <label for="floating_password" class={label}>
-          Password
-        </label>
-      </div>
-      <div class="relative z-0 w-full mb-6 group">
-        <input
-          type="password"
-          name="repeat_password"
-          id="floating_repeat_password"
-          class={input}
-          placeholder=" "
-          required
-        />
-        <label for="floating_repeat_password" class={label}>
-          Confirm password
-        </label>
-      </div>
-      <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="relative z-0 w-full mb-6 group">
-          <input
-            type="text"
-            name="floating_first_name"
-            id="floating_first_name"
-            class={input}
-            placeholder=" "
-            required
-          />
-          <label for="floating_first_name" class={label}>
-            First name
-          </label>
-        </div>
-        <div class="relative z-0 w-full mb-6 group">
-          <input
-            type="text"
-            name="floating_last_name"
-            id="floating_last_name"
-            class={input}
-            placeholder=" "
-            required
-          />
-          <label for="floating_last_name" class={label}>
-            Last name
-          </label>
-        </div>
-      </div>
       <div class="grid md:grid-cols-2 md:gap-6">
         <div class="relative z-0 w-full mb-6 group">
           <input
             type="tel"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             name="floating_phone"
             id="floating_phone"
             class={input}
@@ -85,20 +43,20 @@ const InputForm = (props) => {
             required
           />
           <label for="floating_phone" class={label}>
-            Phone number (123-456-7890)
+            Phone number
           </label>
         </div>
         <div class="relative z-0 w-full mb-6 group">
           <input
-            type="text"
-            name="floating_company"
-            id="floating_company"
+            type="tel"
+            name="floating_phone"
+            id="floating_phone"
             class={input}
             placeholder=" "
             required
           />
-          <label for="floating_company" class={label}>
-            Company (Ex. Google)
+          <label for="floating_phone" class={label}>
+            Parent's phone number
           </label>
         </div>
       </div>
