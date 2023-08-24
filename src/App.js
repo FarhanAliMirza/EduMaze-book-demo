@@ -3,8 +3,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 import Card2 from "./components/Card2";
+import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
-
 function App() {
   return (
     <div>
@@ -32,6 +32,7 @@ function App() {
           image="https://assets.churchofjesuschrist.org/f8/17/f817e4a21336ad73433b4f1f0a5dfca77c6271d41049592/man_studying_reading.jpeg"
         />
       </div>
+      <Carousel />
       <Footer />
     </div>
   );

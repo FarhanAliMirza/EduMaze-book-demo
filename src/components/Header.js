@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../logo.png";
@@ -10,12 +10,32 @@ const navigation = [
   { name: "About Us", href: "#", current: false },
 ];
 
+const sub_navigation = [
+  { name: "Study Material", href: "#" },
+  { name: "Courses", href: "#" },
+  { name: "Subject", href: "#" },
+  { name: "About Us", href: "#" },
+  { name: "Study Material", href: "#" },
+  { name: "Courses", href: "#" },
+  { name: "Subject", href: "#" },
+  { name: "About Us", href: "#" },
+  { name: "Study Material", href: "#" },
+  { name: "Courses", href: "#" },
+  { name: "Subject", href: "#" },
+  { name: "About Us", href: "#" },
+  { name: "Study Material", href: "#" },
+  { name: "Courses", href: "#" },
+  { name: "Subject", href: "#" },
+  { name: "About Us", href: "#" },
+];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const ref = useRef(null);
 
   let profileButton = <div>Profile Button</div>;
 
@@ -106,11 +126,15 @@ export default function Header() {
     );
   }
 
+  const slide = (shift) => {
+    ref.current.scrollLeft += shift;
+  };
+
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl sm:py-4 px-1 sm:px-6 lg:px-2">
+          <div className="mx-auto max-w-7xl sm:pt-4 px-1 sm:px-6 lg:px-2">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -185,6 +209,30 @@ export default function Header() {
               </div>
             </Disclosure.Panel>
           </Transition>
+          <div className="mx-auto max-w-7xl sm:pb-4 px-1 sm:px-6 lg:px-2 flex">
+            <div class="whitespace-nowrap overflow-x-scroll no-scrollbar">
+              {/* <button class=" previous" onClick={() => slide(-50)}>
+                <a>hello</a>
+              </button> */}
+              <ul>
+                {sub_navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={classNames(
+                      "text-gray-900 hover:text-gray-500 px-3 py-2 text-sm font-light inline-block"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </ul>
+              {/* <button class="next" onClick={() => slide(+50)}>
+                <a className="text-gray-900 hover:text-gray-500">hi</a>
+              </button> */}
+            </div>
+          </div>
         </>
       )}
     </Disclosure>
