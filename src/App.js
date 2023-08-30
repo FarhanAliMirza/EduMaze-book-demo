@@ -5,6 +5,9 @@ import Card from "./components/Card";
 import Card2 from "./components/Card2";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
+import FlowBiteCarousel from "./components/FlowBiteCarousel";
+import Slick from "./components/Slick";
+
 function App() {
   return (
     <div>
@@ -33,6 +36,7 @@ function App() {
         />
       </div>
       <Carousel />
+      <Slick />
       <Footer />
     </div>
   );
