@@ -117,12 +117,12 @@ export default function Header() {
     );
   } else {
     profileButton = (
-      <a
+      <button
         className="bg-gray-900 text-white rounded-xl px-3 py-2 text-sm font-medium"
         onClick={loginHandler}
       >
         Login
-      </a>
+      </button>
     );
   }
 
