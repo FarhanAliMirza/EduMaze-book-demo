@@ -20,11 +20,13 @@ const Hero = () => {
           <InputForm />
         </div>
       </div>
-      <img
-        className="absolute h-full md:w-full top-0 opacity-20"
-        src={bg}
-        alt="EduMaze"
-      />
+      <div className="absolute top-0 overflow-auto-y w-full">
+        <img
+          className="max-w-none sm:w-full opacity-5 sm:opacity-20"
+          src={bg}
+          alt="EduMaze"
+        />
+      </div>
     </div>
   );
 };
