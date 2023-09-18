@@ -76,7 +76,7 @@ export default function Header() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? "bg-gray-100" : "",
+                    active ? "bg-light-orange" : "",
                     "block px-4 py-2 text-sm text-gray-700"
                   )}
                 >
@@ -89,11 +89,11 @@ export default function Header() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? "bg-gray-100" : "",
+                    active ? "bg-light-orange" : "",
                     "block px-4 py-2 text-sm text-gray-700"
                   )}
                 >
-                  Settings
+                  Pay Fee
                 </a>
               )}
             </Menu.Item>
@@ -102,7 +102,7 @@ export default function Header() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? "bg-gray-100" : "",
+                    active ? "bg-light-orange" : "",
                     "block px-4 py-2 text-sm text-gray-700"
                   )}
                   onClick={logoutHandler}
@@ -118,7 +118,7 @@ export default function Header() {
   } else {
     profileButton = (
       <button
-        className="bg-gray-900 text-white rounded-xl px-3 py-2 text-sm font-medium"
+        className="bg-edu-orange hover:bg-light-orange text-white rounded-xl px-3 py-2 text-sm font-medium"
         onClick={loginHandler}
       >
         Login
@@ -134,47 +134,60 @@ export default function Header() {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl sm:pt-4 px-1 sm:px-6 lg:px-2">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center border-transparent rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-                <div className="flex flex-shrink-0 items-center justify-start">
-                  <img className="h-8 w-auto" src={logo} alt="EduMaze" />
-                </div>
-                <div className="hidden sm:ml-6 sm:block justify-center">
-                  <div className="flex">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-700 hover:bg-gray-700 hover:text-white ",
-                          "rounded-md px-3 py-2 text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+          <div className="nav1 w-full">
+            <div className="mx-auto max-w-7xl px-1 sm:px-6 lg:px-2">
+              <div className="relative flex h-16 items-center justify-between">
+                <div className="flex flex-1 items-center justify-between sm:items-stretch">
+                  <div className=" flex items-center sm:hidden">
+                    {/* Mobile menu button*/}
+                    <Disclosure.Button className="relative inline-flex items-center justify-center border-transparent rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
+                      <span className="absolute -inset-0.5" />
+                      <span className="sr-only">Open main menu</span>
+                      {open ? (
+                        <XMarkIcon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
+                      ) : (
+                        <Bars3Icon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
+                      )}
+                    </Disclosure.Button>
+                  </div>
+                  <div className="flex flex-shrink-0 items-center justify-center">
+                    {/*Logo*/}
+                    <img className="h-8 w-auto" src={logo} alt="EduMaze" />
+                    <div className="pl-1 pt-1 font-bold text-white">
+                      <span className="text-edu-orange">Edu</span>Maze
+                    </div>
+                  </div>
+                  <div className="hidden sm:ml-6 sm:block justify-center">
+                    {/*Navigation Items*/}
+                    <div className="flex">
+                      {navigation.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current
+                              ? "font-extrabold text-edu-orange"
+                              : "text-edu-orange hover:text-light-orange ",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <div className=" flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    {/* Profile dropdown or login */}
+                    {profileButton}
                   </div>
                 </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile dropdown */}
-                {profileButton}
               </div>
             </div>
           </div>
@@ -209,28 +222,30 @@ export default function Header() {
               </div>
             </Disclosure.Panel>
           </Transition>
-          <div className="mx-auto max-w-7xl sm:pb-4 px-1 sm:px-6 lg:px-2 flex">
-            <div class="whitespace-nowrap overflow-x-scroll no-scrollbar">
-              {/* <button class=" previous" onClick={() => slide(-50)}>
+          <div className="nav2 w-full">
+            <div className="mx-auto max-w-7xl px-1 sm:px-6 lg:px-2 flex">
+              <div class="whitespace-nowrap overflow-x-scroll no-scrollbar">
+                {/* <button class=" previous" onClick={() => slide(-50)}>
                 <a>hello</a>
               </button> */}
-              <ul>
-                {sub_navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      "text-gray-900 hover:text-gray-500 px-3 py-2 text-sm font-light inline-block"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </ul>
-              {/* <button class="next" onClick={() => slide(+50)}>
+                <ul>
+                  {sub_navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className={classNames(
+                        "text-white hover:text-light-orange px-3 py-2 text-sm font-light inline-block"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </ul>
+                {/* <button class="next" onClick={() => slide(+50)}>
                 <a className="text-gray-900 hover:text-gray-500">hi</a>
               </button> */}
+              </div>
             </div>
           </div>
         </>
