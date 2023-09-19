@@ -8,18 +8,10 @@ import Footer from "./components/Footer";
 
 
 function Home() {
-    
-    return (
-  
-  
+      return (
       <>
-       
-     
-
       <div>
-        <div className="coloredbg">
-          
-            
+        <div className="coloredbg">  
         <Hero />
         </div>
         <div className="grid grid-flow-row bg-black">
