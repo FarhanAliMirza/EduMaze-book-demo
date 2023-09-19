@@ -10,10 +10,7 @@ import Payment from "./pages/Payment";
 function App() {
   const { isLoading, error } = useAuth0();
   return (
-
-
     <>
-     
     {error && <p>Authentication Error</p>}
       {!error && isLoading && <p>Loading...</p>}
       {!error && !isLoading && (
@@ -38,5 +35,4 @@ function App() {
     </>
   );
 }
-
 export default App;
