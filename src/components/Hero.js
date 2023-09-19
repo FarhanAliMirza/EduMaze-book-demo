@@ -21,7 +21,7 @@ const Hero = () => {
                   .pauseFor(1000)
                   .deleteAll()
                   .typeString(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Estplacerat in egestas erat"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Estplacerat in egestas erat."
                   )
                   .start();
               }}
