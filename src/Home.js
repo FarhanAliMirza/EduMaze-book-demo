@@ -6,23 +6,14 @@ import Card2 from "./components/Card2";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 
-
 function Home() {
-    
-    return (
-  
-  
-      <>
-       
-     
-
+  return (
+    <>
       <div>
         <div className="coloredbg">
-          
-            
-        <Hero />
+          <Hero />
         </div>
-        <div className="grid grid-flow-row bg-black">
+        <div className="grid grid-flow-row bg-dark-blue">
           <div className="flex flex-col justify-center text-center">
             <h1 className="text-white font-bold text-4xl sm:text-6xl pt-8">
               Our Learning Programs
@@ -45,11 +36,8 @@ function Home() {
         <Carousel />
         <Footer />
       </div>
+    </>
+  );
+}
 
-   
-      </>
-    );
-  }
-  
-  export default Home;
-  
+export default Home;
