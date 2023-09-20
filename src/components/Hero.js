@@ -28,16 +28,16 @@ const Hero = () => {
             />
           </div>
         </div>
+        <div className="absolute top-0 overflow-auto-y w-full">
+          <img
+            className="max-w-none sm:w-full opacity-5 sm:opacity-20"
+            src={bg}
+            alt="EduMaze"
+          />
+        </div>
         <div className="justify-center p-6 sm:py-6 mx-3 sm:mr-12 bg-white/20 rounded-3xl">
           <InputForm />
         </div>
-      </div>
-      <div className="absolute z-[-1] top-0 overflow-auto-y w-full">
-        <img
-          className="max-w-none sm:w-full opacity-5 sm:opacity-20"
-          src={bg}
-          alt="EduMaze"
-        />
       </div>
     </div>
   );
