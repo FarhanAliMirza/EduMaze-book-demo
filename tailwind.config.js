@@ -8,6 +8,9 @@ module.exports = {
         "light-orange": "#FEAB49",
         "dark-blue": "#081122",
       },
+      backgroundImage: {
+        "bg-pattern": "url('bgimg.png')",
+      },
     },
   },
   plugins: [],

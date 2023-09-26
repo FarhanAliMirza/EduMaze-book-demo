@@ -3,38 +3,36 @@ import "../index.css";
 import { db } from "../firebase";
 
 const InputForm = () => {
-const [name, setName] = useState("");
-const [email, setEmail] = useState("");
-const [tel, setTel] = useState("");
-const [tel1, setTel1] = useState("");
-const [classs, setClasss] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [tel1, setTel1] = useState("");
+  const [classs, setClasss] = useState("");
 
-const handleSubmit = (e) =>{
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  db.collection('Enquiry')
-  .add({
-    name:name,
-    email:email,
-    tel:tel,
-    tel1:tel1,
-    class:classs,
-  })
-  .then(()=>{
-    alert('Form submitted')
-  })
-  .catch((error)=>{
-    alert(error.message);
-  })
+    db.collection("Enquiry")
+      .add({
+        name: name,
+        email: email,
+        tel: tel,
+        tel1: tel1,
+        class: classs,
+      })
+      .then(() => {
+        alert("Form submitted");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
 
-   setClasss("");
-   setEmail("");
+    setClasss("");
+    setEmail("");
     setName("");
     setTel("");
-   setTel1("");
-}
-
-
+    setTel1("");
+  };
 
   const input =
     "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none focus:outline-none focus:ring-0 focus:border-light-orange peer";
@@ -43,14 +41,17 @@ const handleSubmit = (e) =>{
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <div className="text-light-orange pb-2 text-center font-bold text-xl sm:text-2xl">
+        Book Your Free Session!
+      </div>
       <div class="relative z-0 w-full mb-6 group">
         <input
           name="text"
           class={input}
           placeholder=" "
           required
-          value={name}  
-          onChange={(e)=>setName(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <label for="floating_name" class={label}>
           Name
@@ -58,13 +59,12 @@ const handleSubmit = (e) =>{
       </div>
       <div class="relative z-0 w-full mb-6 group">
         <input
-          
           name="email"
           class={input}
           placeholder=" "
           required
-          value={email}  
-          onChange={(e)=>setEmail(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label for="floating_email" class={label}>
           Email address
@@ -72,14 +72,13 @@ const handleSubmit = (e) =>{
       </div>
       <div class="relative z-0 w-full mb-6 group">
         <input
-          
           name="tel"
           class={input}
           pattern="[0-9]{10}"
           placeholder=" "
           required
-          value={tel}  
-          onChange={(e)=>setTel(e.target.value)}
+          value={tel}
+          onChange={(e) => setTel(e.target.value)}
         />
         <label for="floating_phone" class={label}>
           Phone number (10-digit)
@@ -87,14 +86,13 @@ const handleSubmit = (e) =>{
       </div>
       <div class="relative z-0 w-full mb-6 group">
         <input
-          
           name="tel1"
           class={input}
           placeholder=" "
           pattern="[0-9]{10}"
           required
-          value={tel1}  
-          onChange={(e)=>setTel1(e.target.value)}
+          value={tel1}
+          onChange={(e) => setTel1(e.target.value)}
         />
         <label for="floating_phone" class={label}>
           Parent's number (10-digit)
@@ -102,13 +100,12 @@ const handleSubmit = (e) =>{
       </div>
       <div class="relative z-0 w-full mb-6 group">
         <input
-          
           name="classs"
           class={input}
           placeholder=" "
           required
-          value={classs}  
-          onChange={(e)=>setClasss(e.target.value)}
+          value={classs}
+          onChange={(e) => setClasss(e.target.value)}
         />
         <label for="floating_name" class={label}>
           Class
@@ -130,11 +127,10 @@ const handleSubmit = (e) =>{
         <option>Others</option>
       </select> */}
       <button
-        
         type="submit"
         class="text-white bg-edu-orange hover:bg-light-orange focus:ring-4 focus:outline-none focus:ring-light-orange font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
       >
-        Submit
+        Book Now
       </button>
     </form>
   );
