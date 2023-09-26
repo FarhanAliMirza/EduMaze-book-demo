@@ -6,7 +6,7 @@ import bg from "../bgimg.png";
 const Hero = () => {
   return (
     <div className="relative overflow-x-hidden overflow-y-hidden">
-      <div className="justify-around items-center pt-10 pb-36 grid sm:grid-cols-3 grid-cols-1">
+      <div className="justify-around bg-[url('bgimg.png')] items-center pt-10 pb-36 grid sm:grid-cols-3 grid-cols-1">
         <div className="text-left p-12 sm:m-12 col-span-2">
           <h1 className="text-white font-bold text-4xl sm:text-6xl sm:leading-relaxed">
             Ut Tellus Elementum Sagittis Vitae
@@ -28,13 +28,14 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="absolute top-0 overflow-auto-y w-full">
+        {/* <div className="absolute top-0 overflow-auto-y w-full">
           <img
             className="max-w-none sm:w-full opacity-5 sm:opacity-20"
             src={bg}
             alt="EduMaze"
           />
-        </div>
+          
+        </div> */}
         <div className="justify-center p-6 sm:py-6 mx-3 sm:mr-12 bg-white/20 rounded-3xl">
           <InputForm />
         </div>
